@@ -25,22 +25,24 @@ export default {
 
 		const res = await env.AI.run("@cf/deepseek-ai/deepseek-r1-distill-qwen-32b", {
 			messages: [
-				{role: "system", content: "You scrape webpages for IP ranges and hostnames."},
-				{role: "user", content: `Retrieve the hostnames provided from the following HTML webpage's page:\n\n<webpage>${contents}</contents>`}
+				{ role: "system", content: "You scrape webpages for IP ranges and hostnames." },
+				{ role: "user", content: `Retrieve the hostnames provided from the following HTML webpage's page:\n\n<webpage>${contents}</contents>` }
 			],
-			response_format: {
-				type: "object",
-				required: ["hostnames"],
-				json_schema: {
-					type: "object",
-					properties: {
-						hostnames: {
-							type: "array",
-							items: {
-								type: "string"
+			"response_format": {
+				"type": "json_schema",
+				"json_schema": {
+					"type": "object",
+					"properties": {
+						"hostnames": {
+							"type": "array",
+							"items": {
+								"type": "string"
 							}
 						}
-					}
+					},
+					"required": [
+						"hostnames"
+					]
 				}
 			},
 			stream: false
