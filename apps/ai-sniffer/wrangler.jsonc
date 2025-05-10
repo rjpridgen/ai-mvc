@@ -12,20 +12,20 @@
 	},
 	"ai": {
 		"binding": "AI"
-	},
-	"queues": {
-		"consumers": [
-			{
-				"queue": "my-queue"
-			}
-		],
-		"producers": [
-			{
-				"binding": "MY_QUEUE",
-				"queue": "my-queue"
-			}
-		]
 	}
+	// "queues": {
+	// 	"consumers": [
+	// 		{
+	// 			"queue": "my-queue"
+	// 		}
+	// 	],
+	// 	"producers": [
+	// 		{
+	// 			"binding": "MY_QUEUE",
+	// 			"queue": "my-queue"
+	// 		}
+	// 	]
+	// }
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
