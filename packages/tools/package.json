@@ -1,0 +1,13 @@
+{
+	"name": "@repo/tools",
+	"version": "0.31.1",
+	"private": true,
+	"sideEffects": false,
+	"type": "module",
+	"directories": {
+		"bin": "bin"
+	},
+	"devDependencies": {
+		"@types/node": "22.14.1"
+	}
+}
