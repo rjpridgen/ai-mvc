@@ -14,12 +14,6 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-export interface Env {
-	AI: Ai
-}
-
-
-
 export default {
 	async fetch(request, env, ctx) {
 		const body: {
@@ -48,7 +42,8 @@ export default {
 						}
 					}
 				}
-			}
+			},
+			stream: false
 		})
 
 		return Response.json(res)
